@@ -191,10 +191,12 @@
             justify-content: center;
             padding: 20px;
         }
-
+        .thirdSection .box:hover {
+            transform: scale(1.05);
+        }
         .thirdSection .box {
             width: 172px;
-            height: 300px;
+            height: 430px;
             background-color: rgb(15, 18, 72);
             color: white;
             border-radius: 12px;
@@ -202,17 +204,10 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-         
-            /* align items to top */
+            justify-content: space-between;
             align-items: center;
-            /* center horizontally */
             text-align: center;
             transition: transform 0.3s ease;
-            justify-content: space-between;
-        }
-
-        .thirdSection .box:hover {
-            transform: scale(1.05);
         }
 
         .thirdSection .box-title {
@@ -221,14 +216,23 @@
             margin-bottom: 10px;
         }
 
+        /* 💡 New wrapper to push desc to vertical center */
+        .thirdSection .box-middle {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
         .thirdSection .box-desc {
             font-size: 14px;
             color: #ccc;
+            padding: 0 5px;
         }
 
         .view-btn {
+            margin-top: 10px;
             padding: 6px 12px;
-            background-color: #4CAF50;
+            background-color: #000000;
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -236,8 +240,8 @@
             transition: background-color 0.3s;
         }
 
-        .view-btn:hover {
-            background-color: #388e3c;
+        .view-btn :hover {
+            background-color: #160a497c;
         }
     </style>
 </head>
@@ -313,65 +317,81 @@
             <div class="container">
                 <div class="box">
                     <div class="box-title"> Face Emotion Detection System</div>
-                    <div class="box-desc">
-                        Built a real-time facial emotion recognition system using CNN and OpenCV.<br><br>
-                        <strong>Tech Stack:</strong> Python, OpenCV, TensorFlow, Keras
-                        <br><br>
-                        <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
-                            class="view-btn">View Project</a>
+                    <div class="box-middle">
+                        <div class="box-desc">
+                            Built a real-time facial emotion recognition system using CNN and OpenCV.<br><br>
+                            <strong>Tech Stack:</strong> Python, OpenCV, TensorFlow, Keras
+                        </div>
                     </div>
+                    <br><br>
+                    <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
+                        class="view-btn">View Project</a>
+
                 </div>
                 <div class="box">
                     <div class="box-title">Periodic Table Visualizer</div>
-                    <div class="box-desc">
-                        Created an interactive periodic table using Python and Pygame with tooltips and images for
-                        enhanced engagement.<br><br>
-                        <strong>Tech Stack:</strong> Python, Pygame, Pandas
-                        <br><br>
-                        <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
-                            class="view-btn">View Project</a>
+                    <div class="box-middle">
+                        <div class="box-desc">
+                            Created an interactive periodic table using Python and Pygame with tooltips and images for
+                            enhanced engagement.<br><br>
+                            <strong>Tech Stack:</strong> Python, Pygame, Pandas
+                        </div>
                     </div>
+                    <br><br>
+                    <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
+                        class="view-btn">View Project</a>
+
                 </div>
 
                 <div class="box">
                     <div class="box-title">Breast Cancer Detection using Machine Learning</div>
-                    <div class="box-desc">
-                        Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
-                        accuracy.<br><br>
-                        <strong>Tech Stack:</strong> Python, Scikit-learn, XGBoost, Pandas , Html , Css
-                        <br><br>
-                        <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
-                            target="_blank" class="view-btn">View Project</a>
+                    <div class="box-middle">
+                        <div class="box-desc">
+                            Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
+                            accuracy.<br><br>
+                            <strong>Tech Stack:</strong> Python, Scikit-learn, XGBoost, Pandas , Html , Css
+                        </div>
                     </div>
+                    <br><br>
+                    <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
+                        target="_blank" class="view-btn">View Project</a>
+
                 </div>
 
                 <div class="box">
                     <div class="box-title">BCREC Chatbot</div>
-                    <div class="box-desc">
-                        Built a rule-based chatbot using NLP to answer college-related queries for BCREC.<br>
-                        <strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, Streamlit
-                        <br><br>
-                        <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">View
-                            Project</a>
+                    <div class="box-middle">
+                        <div class="box-desc">
+                            Built a rule-based chatbot using NLP to answer college-related queries for BCREC.<br><br>
+                            <strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, Streamlit
+                        </div>
                     </div>
+                    <br><br>
+                    <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">View
+                        Project</a>
+
                 </div>
 
                 <div class="box">
                     <div class="box-title">Automated Invoice Email Reminder</div>
-                    <div class="box-desc">
-                        Scheduled email reminders using GitHub Actions and Gmail SMTP.<br>
-                        Used Google Sheets as a data source and secured credentials via environment variables.<br>
-                        <strong>Tech Stack:</strong> Python, Pandas, GitHub Actions, Gmail SMTP
-                        <br><br>
-                        <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
-                            class="view-btn">View
-                            Project</a>
+                    <div class="box-middle">
+                        <div class="box-desc">
+                            Scheduled email reminders using GitHub Actions and Gmail SMTP.<br>
+                            Used Google Sheets as a data source and secured credentials via environment variables.<br><br>
+                            <strong>Tech Stack:</strong> Python, Pandas, GitHub Actions, Gmail SMTP
+                        </div>
                     </div>
+                    <br><br>
+                    <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
+                        class="view-btn">View
+                        Project</a>
+
                 </div>
 
             </div>
         </section>
 
+        <div class="box-middle">
 
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
