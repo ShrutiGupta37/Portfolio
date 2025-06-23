@@ -85,7 +85,7 @@
         .secondSection {
             max-width: 80%;
             margin: auto;
-            height: 91vh;
+            height: 100vh;
         }
 
         .thirdSection {
@@ -113,9 +113,9 @@
             height: 87px;
         }
 
-         .secondSection .box {
+        .secondSection .box {
             background: white;
-            width: 78vw;
+            width: 77vw;
             height: 2px;
             margin: 56px 0;
             display: flex;
@@ -182,17 +182,62 @@
             padding: 20px;
         }
 
-        .thirdSection .box {
-            width: 200px;
-            height: 400px;
-            background-color: #2d4095;
-            color: white;
+
+
+        .container {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
+            padding: 20px;
+        }
+
+        .thirdSection .box {
+            width: 172px;
+            height: 300px;
+            background-color: rgb(15, 18, 72);
+            color: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+         
+            /* align items to top */
+            align-items: center;
+            /* center horizontally */
+            text-align: center;
+            transition: transform 0.3s ease;
+            justify-content: space-between;
+        }
+
+        .thirdSection .box:hover {
+            transform: scale(1.05);
+        }
+
+        .thirdSection .box-title {
             font-size: 18px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgb(251 251 251 / 20%);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .thirdSection .box-desc {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .view-btn {
+            padding: 6px 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .view-btn:hover {
+            background-color: #388e3c;
         }
     </style>
 </head>
@@ -266,14 +311,65 @@
             <div class="vertical"></div>
             <h1>Projects</h1>
             <div class="container">
-                <div class="box">Box 1</div>
-                <div class="box">Box 2</div>
-                <div class="box">Box 3</div>
-                <div class="box">Box 4</div>
-                <div class="box">Box 5</div>
+                <div class="box">
+                    <div class="box-title"> Face Emotion Detection System</div>
+                    <div class="box-desc">
+                        Built a real-time facial emotion recognition system using CNN and OpenCV.<br><br>
+                        <strong>Tech Stack:</strong> Python, OpenCV, TensorFlow, Keras
+                        <br><br>
+                        <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
+                            class="view-btn">View Project</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-title">Periodic Table Visualizer</div>
+                    <div class="box-desc">
+                        Created an interactive periodic table using Python and Pygame with tooltips and images for
+                        enhanced engagement.<br><br>
+                        <strong>Tech Stack:</strong> Python, Pygame, Pandas
+                        <br><br>
+                        <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
+                            class="view-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-title">Breast Cancer Detection using Machine Learning</div>
+                    <div class="box-desc">
+                        Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
+                        accuracy.<br><br>
+                        <strong>Tech Stack:</strong> Python, Scikit-learn, XGBoost, Pandas , Html , Css
+                        <br><br>
+                        <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
+                            target="_blank" class="view-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-title">BCREC Chatbot</div>
+                    <div class="box-desc">
+                        Built a rule-based chatbot using NLP to answer college-related queries for BCREC.<br>
+                        <strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, Streamlit
+                        <br><br>
+                        <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-title">Automated Invoice Email Reminder</div>
+                    <div class="box-desc">
+                        Scheduled email reminders using GitHub Actions and Gmail SMTP.<br>
+                        Used Google Sheets as a data source and secured credentials via environment variables.<br>
+                        <strong>Tech Stack:</strong> Python, Pandas, GitHub Actions, Gmail SMTP
+                        <br><br>
+                        <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
+                            class="view-btn">View
+                            Project</a>
+                    </div>
+                </div>
+
             </div>
-
-
         </section>
 
 
