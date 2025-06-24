@@ -86,9 +86,16 @@
             max-width: 80%;
             margin: auto;
             height: 100vh;
+
         }
 
         .thirdSection {
+            max-width: 80%;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .timeline-area {
             max-width: 80%;
             margin: auto;
             height: 100vh;
@@ -100,11 +107,15 @@
             margin: 100px 84px;
         }
 
+        .text-gray {
+            color: gray;
+        }
+
         .secondSection h1 {
             margin: 6px 0px;
 
             font-size: 2.3rem;
-            height: 188px;
+            height: 125px;
         }
 
         .thirdSection h1 {
@@ -116,84 +127,90 @@
         .secondSection .box {
             background: white;
             width: 77vw;
-            height: 2px;
-            margin: 56px 0;
+            height: 1px;
             display: flex;
         }
-
 
         .secondSection .vertical {
+            position: relative;
+            width: 280px;
+
+            color: white;
+            border-radius: 12px;
+            padding: 2px 7px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 50px;
+        }
+
+        /* 🔽 Vertical line below the box */
+        .secondSection .vertical::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            /* Adjust height as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
             background-color: white;
-            width: 1px;
-            height: 93px;
-            margin: 0 260px;
-
         }
+
+
 
 
 
         .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -10px;
+            width: 130px;
+            height: auto;
+            margin-bottom: 12px;
         }
 
-        .text-gray {
-            color: gray;
+        .secondSection .vertical-title1 {
+            top: 350px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 8px 0 2px 0;
         }
 
-        .vertical-title1 {
-            position: relative;
-            top: -61px;
-            width: 444px;
-            font-size: 1.07rem;
+        .secondSection .vertical-title2 {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 10px;
         }
 
-        .vertical-title2 {
-            position: relative;
-            top: -48px;
-            width: 235px;
-            font-size: 1rem;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: -25px;
-            color: gray;
-            width: 250px;
-            font-size: 1.15rem;
-        }
-
-        .image-top {
-            width: 150px;
-            position: relative;
-            top: -152px;
-            left: -59px;
+        .secondSection .vertical-desc {
+            font-size: 14px;
+            line-height: 1.5;
         }
 
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            /* Allows wrapping on small screens */
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-        }
 
-
-
-        .container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
             padding: 20px;
         }
+
         .thirdSection .box:hover {
             transform: scale(1.09);
         }
+
+        .secondSection .vertical:hover {
+            transform: scale(1.09);
+        }
+
+        .secondSection .vertical {
+            transition: transform 0.2s ease;
+            /* Smooth animation */
+        }
+
         .thirdSection .box {
             width: 172px;
             height: 430px;
@@ -239,10 +256,6 @@
             font-size: 14px;
             transition: background-color 0.3s;
         }
-
-        .view-btn :hover {
-            background-color: #160a497c;
-        }
     </style>
 </head>
 
@@ -274,42 +287,61 @@
             </div>
         </section>
         <hr>
+
+
         <section class="secondSection">
             <span class="text-gray">What I have done so far</span>
             <h1>Work Experience</h1>
             <div class="box">
+
                 <div class="vertical">
-                    <img class="image-top" src="Chatbot.png" alt="">
-                    <div class="vertical-title1">
-                        AI Intern — TechSaksham (Microsoft + SAP Initiative)
-                    </div>
-                    <div class="vertical-title2">
-                        Remote | Nov 2024-Dec 2024
-                    </div>
+                    <img class="image-top" src="school.png" alt="Data Science Icon" />
+                    <div class="vertical-title1">Secondary (X), WBBSE </div>
+                    <div class="vertical-title2">2020</div>
                     <div class="vertical-desc">
-                        Built a rule-based chatbot using Python, NLTK, Scikit-learn & Streamlit to handle
-                        college-related queries for BCREC, with focus on intent classification and NLP.
+                        Benachity Netaji Vidyalaya Hindi High School
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="datasci-.png" alt="">
-                    <div class="vertical-title1">
-                        Data Science Intern — Celebal Technologies
-                    </div>
-                    <div class="vertical-title2">
-                        Remote | Jun 2025-Aug 2025
-                    </div>
+                    <img class="image-top" src="school.png" alt="Data Science Icon" />
+                    <div class="vertical-title1">Senior Secondary (XII), WBCHSE</div>
+                    <div class="vertical-title2">2020-2022</div>
                     <div class="vertical-desc">
-                        Selected for a remote Data Science internship focused on industry projects, with hands-on
-                        learning in data analysis, modeling, and ML workflows.
+                        Nepali Para Hindi High School
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="college.png" alt="Data Science Icon" />
+                    <div class="vertical-title1">B.Tech, Computer Science & Engineering</div>
+                    <div class="vertical-title2">2022-2026</div>
+                    <div class="vertical-desc">
+                        Dr B.C. Roy Engineering College , Durgapur
+                    </div>
+                </div>
 
+                <div class="vertical">
+                    <img class="image-top" src="Chatbot.png" alt="Chatbot Icon" />
+                    <div class="vertical-title1">AI Intern — TechSaksham (Microsoft + SAP)</div>
+                    <div class="vertical-title2">Remote | Nov 2024 - Dec 2024</div>
+                    <div class="vertical-desc">
+                        Built a rule-based chatbot using Python, NLTK, Scikit-learn & Streamlit to handle
+                        college-related queries for BCREC, with a focus on intent classification and NLP.
+                    </div>
+                </div>
 
+                <div class="vertical">
+                    <img class="image-top" src="datasci-.png" alt="Data Science Icon" />
+                    <div class="vertical-title1">Data Science Intern — Celebal Technologies</div>
+                    <div class="vertical-title2">Remote | Jun 2025 - Aug 2025</div>
+                    <div class="vertical-desc">
+                        Selected for a remote Data Science internship focused on real-world projects with
+                        hands-on learning in data analysis, modeling, and ML workflows.
                     </div>
                 </div>
 
             </div>
-
         </section>
+
         <section class="thirdSection">
             <span class="text-gray">Projects I have worked</span>
             <div class="vertical"></div>
@@ -332,7 +364,8 @@
                     <div class="box-title">Periodic Table Visualizer</div>
                     <div class="box-middle">
                         <div class="box-desc">
-                            Created an interactive periodic table using Python and Pygame with tooltips and images for
+                            Created an interactive periodic table using Python and Pygame with tooltips and images
+                            for
                             enhanced engagement.<br><br>
                             <strong>Tech Stack:</strong> Python, Pygame, Pandas
                         </div>
@@ -362,7 +395,8 @@
                     <div class="box-title">BCREC Chatbot</div>
                     <div class="box-middle">
                         <div class="box-desc">
-                            Built a rule-based chatbot using NLP to answer college-related queries for BCREC.<br><br>
+                            Built a rule-based chatbot using NLP to answer college-related queries for
+                            BCREC.<br><br>
                             <strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, Streamlit
                         </div>
                     </div>
@@ -377,7 +411,8 @@
                     <div class="box-middle">
                         <div class="box-desc">
                             Scheduled email reminders using GitHub Actions and Gmail SMTP.<br>
-                            Used Google Sheets as a data source and secured credentials via environment variables.<br><br>
+                            Used Google Sheets as a data source and secured credentials via environment
+                            variables.<br><br>
                             <strong>Tech Stack:</strong> Python, Pandas, GitHub Actions, Gmail SMTP
                         </div>
                     </div>
@@ -390,10 +425,10 @@
 
             </div>
         </section>
-
-        <div class="box-middle">
-
     </main>
+
+
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
