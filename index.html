@@ -24,8 +24,8 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 80px;
-            background-color: rgb(15, 18, 72);
+            height: 70px;
+             background-color: #1e1e2f;
         }
 
         nav ul {
@@ -40,13 +40,16 @@
 
         nav ul li a {
             text-decoration: none;
+
+           
+            transition: color 0.3s;
             color: white;
         }
 
         nav ul li a:hover {
 
-            color: yellow;
-            font-size: 1.05rem;
+             color: #00adb5;
+            
         }
 
         .left {
@@ -147,7 +150,6 @@
             margin-top: 50px;
         }
 
-        /* 🔽 Vertical line below the box */
         .secondSection .vertical::after {
             content: "";
             position: absolute;
@@ -159,9 +161,6 @@
             height: 50px;
             background-color: white;
         }
-
-
-
 
 
         .image-top {
@@ -255,6 +254,58 @@
             border-radius: 6px;
             font-size: 14px;
             transition: background-color 0.3s;
+        }
+
+        footer {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 40px 20px 20px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .footer>div {
+            flex: 1 1 200px;
+            min-width: 200px;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin-bottom: 10px;
+            color: #00adb5;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin: 6px 0;
+        }
+
+        .footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: #00adb5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9em;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -427,6 +478,44 @@
         </section>
     </main>
 
+
+    <!-- Footer HTML -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Shruti's Portfolio</h3>
+                <p>Crafting Code, Creating Impact</p>
+            </div>
+
+            <div class="footer-second">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-third">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://github.com/ShrutiGupta37" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/shruti-gupta-32134b268/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:shrutigupta.cse37@gmail.com">Email</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-fourth">
+                <h4>Location</h4>
+                <p>Durgapur, West Bengal<br>India - 713203</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shruti Gupta | All rights reserved.</p>
+        </div>
+    </footer>
 
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
