@@ -10,399 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        html.no-scroll {
-            scroll-behavior: auto !important;
-        }
-
-        body {
-            background-color: rgb(0, 0, 36);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
-
-
-
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 70px;
-            background-color: #1e1e2f;
-
-            z-index: 999;
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: slideDown 1s ease-out forwards;
-
-        }
-
-        nav.scrolled {
-            backdrop-filter: blur(10px);
-            background-color: rgba(30, 30, 47, 0.8);
-        }
-
-
-        @keyframes slideDown {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-
-
-
-
-        nav ul li a {
-            text-decoration: none;
-
-
-            transition: color 0.3s;
-            color: white;
-        }
-
-        nav ul li a:hover {
-
-            color: #00adb5;
-
-        }
-
-        .left {
-            font-size: 1.7rem;
-
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 180px 0;
-
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            font-size: 2.3rem;
-            font-weight: 800;
-
-
-
-        }
-
-        .rightSection img {
-            width: 100%;
-        }
-
-        .purple {
-            color: yellow;
-        }
-
-        #element {
-            color: yellow;
-        }
-
-        .secondSection {
-            max-width: 80%;
-            margin: auto;
-            height: 100vh;
-            padding: 60px 0;
-
-        }
-
-
-        .thirdSection {
-            max-width: 80%;
-            margin: auto;
-            height: 100vh;
-            padding: 60px 0;
-        }
-
-        .timeline-area {
-            max-width: 80%;
-            margin: auto;
-            height: 100vh;
-        }
-
-        main hr {
-            border: 0;
-            height: 1.2px;
-            margin: 100px 84px;
-        }
-
-        .text-gray {
-            color: gray;
-        }
-
-        .secondSection h1 {
-            margin: 6px 0px;
-
-            font-size: 2.3rem;
-            height: 125px;
-        }
-
-        .skills-section h1 {
-            margin: 6px 0px;
-
-            font-size: 2.3rem;
-            height: 125px;
-        }
-
-        .thirdSection h1 {
-            margin: 11px 0px;
-            font-size: 2.3rem;
-            height: 87px;
-        }
-
-        .secondSection .box {
-            background: white;
-            width: 77vw;
-            height: 1px;
-            display: flex;
-        }
-
-        .secondSection .vertical {
-            position: relative;
-            width: 280px;
-
-            color: white;
-            border-radius: 12px;
-            padding: 2px 7px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            margin-top: 50px;
-        }
-
-        .secondSection .vertical::after {
-            content: "";
-            position: absolute;
-            bottom: 0px;
-            /* Adjust height as needed */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 50px;
-            background-color: white;
-        }
-
-
-        .image-top {
-            width: 130px;
-            height: auto;
-            margin-bottom: 12px;
-        }
-
-        .secondSection .vertical-title1 {
-            top: 350px;
-            font-size: 18px;
-            font-weight: bold;
-            margin: 8px 0 2px 0;
-        }
-
-        .secondSection .vertical-title2 {
-            font-size: 14px;
-            color: #aaa;
-            margin-bottom: 10px;
-        }
-
-        .secondSection .vertical-desc {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-
-        .container {
-
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-
-        }
-
-        .thirdSection .box:hover {
-            transform: scale(1.09);
-        }
-
-        .secondSection .vertical:hover {
-            transform: scale(1.09);
-        }
-
-        .secondSection .vertical {
-            transition: transform 0.2s ease;
-            /* Smooth animation */
-        }
-
-        .thirdSection .box {
-            width: 172px;
-            height: 430px;
-            background-color: rgb(15, 18, 72);
-            color: white;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .thirdSection .box-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* 💡 New wrapper to push desc to vertical center */
-        .thirdSection .box-middle {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-        }
-
-        .thirdSection .box-desc {
-            font-size: 14px;
-            color: #ccc;
-            padding: 0 5px;
-        }
-
-        .view-btn {
-            margin-top: 10px;
-            padding: 6px 12px;
-            background-color: #000000;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: background-color 0.3s;
-        }
-
-        footer {
-            background-color: #1e1e2f;
-            color: white;
-            padding: 40px 20px 20px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .footer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-
-        .footer>div {
-            flex: 1 1 200px;
-            min-width: 200px;
-        }
-
-        .footer h3,
-        .footer h4 {
-            margin-bottom: 10px;
-            color: #00adb5;
-        }
-
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin: 6px 0;
-        }
-
-        .footer ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer ul li a:hover {
-            color: #00adb5;
-        }
-
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-
-
-
-
-        .skills-section {
-            max-width: 80%;
-            margin: auto;
-            height: 60vh;
-        }
-
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 30px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .tech-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #c0c0c0;
-        }
-
-        .tech-icon i:hover {
-            color: #00adb5;
-            /* change to your accent color */
-            transform: scale(1.5);
-        }
-
-        .tech-icon i {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-        .tech-icon i {
-    transition: all 0.3s ease;
-}
-
-        .tech-icon span {
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -433,7 +41,7 @@
                 <span id="element"></span>
             </div>
             <div class="rightSection">
-                <img src="Bg.png" alt="">
+                <img src="images/Bg.png" alt="">
             </div>
         </section>
         <hr>
@@ -445,7 +53,8 @@
             <div class="box">
 
                 <div class="vertical">
-                    <img class="image-top" src="school.png" alt="Data Science Icon" />
+                  <img class="image-top" src="images/school.png" alt="Data Science Icon">
+
                     <div class="vertical-title1">Secondary (X), WBBSE </div>
                     <div class="vertical-title2">2020</div>
                     <div class="vertical-desc">
@@ -453,7 +62,7 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="school.png" alt="Data Science Icon" />
+                    <img class="image-top" src="images/school.png" alt="Data Science Icon" />
                     <div class="vertical-title1">Senior Secondary (XII), WBCHSE</div>
                     <div class="vertical-title2">2020-2022</div>
                     <div class="vertical-desc">
@@ -461,7 +70,7 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="college.png" alt="Data Science Icon" />
+                    <img class="image-top" src="images/college.png" alt="Data Science Icon" />
                     <div class="vertical-title1">B.Tech, Computer Science & Engineering</div>
                     <div class="vertical-title2">2022-2026</div>
                     <div class="vertical-desc">
@@ -470,7 +79,7 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="Chatbot.png" alt="Chatbot Icon" />
+                    <img class="image-top" src="images/Chatbot.png" alt="Chatbot Icon" />
                     <div class="vertical-title1">AI Intern — TechSaksham (Microsoft + SAP)</div>
                     <div class="vertical-title2">Remote | Nov 2024 - Dec 2024</div>
                     <div class="vertical-desc">
@@ -480,7 +89,7 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="datasci-.png" alt="Data Science Icon" />
+                    <img class="image-top" src="images/datasci-.png" alt="Data Science Icon" />
                     <div class="vertical-title1">Data Science Intern — Celebal Technologies</div>
                     <div class="vertical-title2">Remote | Jun 2025 - Aug 2025</div>
                     <div class="vertical-desc">
