@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
     <style>
         * {
             margin: 0;
@@ -28,6 +30,9 @@
             color: white;
             font-family: 'Poppins', sans-serif;
         }
+
+
+
 
         nav {
             display: flex;
@@ -66,6 +71,10 @@
             margin: 0 23px;
         }
 
+
+
+
+
         nav ul li a {
             text-decoration: none;
 
@@ -82,13 +91,15 @@
 
         .left {
             font-size: 1.7rem;
+
         }
 
         .firstSection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 215px 0;
+            padding: 180px 0;
+
         }
 
         .firstSection>div {
@@ -97,6 +108,8 @@
 
         .leftSection {
             font-size: 2.3rem;
+            font-weight: 800;
+
 
 
         }
@@ -117,13 +130,16 @@
             max-width: 80%;
             margin: auto;
             height: 100vh;
+            padding: 60px 0;
 
         }
+
 
         .thirdSection {
             max-width: 80%;
             margin: auto;
             height: 100vh;
+            padding: 60px 0;
         }
 
         .timeline-area {
@@ -143,6 +159,13 @@
         }
 
         .secondSection h1 {
+            margin: 6px 0px;
+
+            font-size: 2.3rem;
+            height: 125px;
+        }
+
+        .skills-section h1 {
             margin: 6px 0px;
 
             font-size: 2.3rem;
@@ -328,6 +351,7 @@
             color: #00adb5;
         }
 
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
@@ -335,11 +359,55 @@
             font-size: 0.9em;
             margin-top: 20px;
         }
+
+
+
+
+        .skills-section {
+            max-width: 80%;
+            margin: auto;
+            height: 60vh;
+        }
+
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tech-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #c0c0c0;
+        }
+
+        .tech-icon i:hover {
+            color: #00adb5;
+            /* change to your accent color */
+            transform: scale(1.5);
+        }
+
+        .tech-icon i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .tech-icon i {
+    transition: all 0.3s ease;
+}
+
+        .tech-icon span {
+            font-size: 14px;
+        }
     </style>
+
 </head>
 
 <body>
-    <header>
+    <header id="navbar">
         <nav>
             <div class="left">Shruti's Portfolio</div>
             <div class="right">
@@ -347,6 +415,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact Me</a></li>
 
                 </ul>
@@ -507,7 +576,56 @@
             </div>
         </section>
 
-        
+        <section id="skills" class="skills-section">
+            <span class="text-gray">What skills I know </span>
+            <h1>Skills</h1>
+            <div class="tech-grid">
+                <div class="tech-icon">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS3</span>
+                </div>
+
+                <div class="tech-icon">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-c-plain colored"></i>
+                    <span>C</span>
+                </div>
+
+
+                <div class="tech-icon">
+                    <i class="devicon-git-plain colored"></i>
+                    <span>Git</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-github-original colored"></i>
+                    <span>GitHub</span>
+                </div>
+
+
+                <div class="tech-icon">
+                    <i class="devicon-mysql-plain colored"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-jupyter-plain colored"></i>
+                    <span>Jupyter</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-visualstudio-plain colored"></i>
+                    <span>Visual Studio</span>
+                </div>
+            </div>
+        </section>
+
+
+
     </main>
 
 
@@ -557,11 +675,13 @@
             typeSpeed: 50,
         });
 
- window.onload = function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0);
-  };
+        window.onload = function () {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 0);
+        };
+
+
 
     </script>
 
