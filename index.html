@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
     <title>Shruti Gupta Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +36,7 @@
 
 
     <main>
-        <section id="home" class="firstSection">
+        <section id="home" class="firstSection fade-in">
             <div class="leftSection">
                 Hi, My name is <span class="purple">Shruti</span>
                 <div>and I am a passionate</div>
@@ -47,13 +49,13 @@
         <hr>
 
 
-        <section id="about" class="secondSection">
+        <section id="about" class="secondSection fade-in">
             <span class="text-gray">What I have done so far</span>
             <h1>Work Experience</h1>
             <div class="box">
 
                 <div class="vertical">
-                  <img class="image-top" src="images/school.png" alt="Data Science Icon">
+                    <img class="image-top" src="images/school.png" alt="Data Science Icon">
 
                     <div class="vertical-title1">Secondary (X), WBBSE </div>
                     <div class="vertical-title2">2020</div>
@@ -101,12 +103,14 @@
             </div>
         </section>
 
-        <section id="projects" class="thirdSection">
+        <div class="hr"><hr></div>
+
+        <section id="projects" class="thirdSection fade-in">
             <span class="text-gray">Projects I have worked</span>
             <div class="vertical"></div>
             <h1>Projects</h1>
             <div class="container">
-                <div class="box">
+                <div class="box slide-left">
                     <div class="box-title"> Face Emotion Detection System</div>
                     <div class="box-middle">
                         <div class="box-desc">
@@ -119,7 +123,7 @@
                         class="view-btn">View Project</a>
 
                 </div>
-                <div class="box">
+                <div class="box slide-right">
                     <div class="box-title">Periodic Table Visualizer</div>
                     <div class="box-middle">
                         <div class="box-desc">
@@ -135,7 +139,7 @@
 
                 </div>
 
-                <div class="box">
+                <div class="box slide-left">
                     <div class="box-title">Breast Cancer Detection using Machine Learning</div>
                     <div class="box-middle">
                         <div class="box-desc">
@@ -150,7 +154,7 @@
 
                 </div>
 
-                <div class="box">
+                <div class="box slide-right">
                     <div class="box-title">BCREC Chatbot</div>
                     <div class="box-middle">
                         <div class="box-desc">
@@ -165,7 +169,7 @@
 
                 </div>
 
-                <div class="box">
+                <div class="box slide-left">
                     <div class="box-title">Automated Invoice Email Reminder</div>
                     <div class="box-middle">
                         <div class="box-desc">
@@ -184,8 +188,9 @@
 
             </div>
         </section>
+         <div class="hr2"><hr></div>
 
-        <section id="skills" class="skills-section">
+        <section id="skills" class="skills-section fade-in">
             <span class="text-gray">What skills I know </span>
             <h1>Skills</h1>
             <div class="tech-grid">
@@ -289,6 +294,25 @@
                 window.scrollTo(0, 0);
             }, 0);
         };
+
+
+
+
+
+
+        const observers = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible'); // key line for re-triggering
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observers.forEach(el => observer.observe(el));
 
 
 
