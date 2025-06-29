@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
+
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -23,7 +25,10 @@
     <header id="navbar">
         <nav>
             <div class="left">Shruti's Portfolio</div>
-            <div class="right">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="right" id="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -72,8 +77,9 @@
                 </div>
             </div>
             <div class="rightSection">
-                <img src="images/Bg.png" alt="">
+                <img src="images/Bg.gif" alt="">
             </div>
+
         </section>
         <hr>
 
@@ -222,17 +228,9 @@
 
                 </div>
 
-
-
-
-         
-
-
-
-
-
             </div>
         </section>
+
         <div class="hr2">
             <hr>
         </div>
@@ -314,6 +312,11 @@
 
 
 
+
+
+
+
+
     </main>
 
 
@@ -390,7 +393,26 @@
 
 
 
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            const mainContent = document.querySelector(".firstSection");
+
+            navLinks.classList.toggle("show");
+
+            if (navLinks.classList.contains("show")) {
+                mainContent.style.marginTop = "120px";  // Push down
+            } else {
+                mainContent.style.marginTop = "0";      // Reset
+            }
+        }
+
+
+
+
+
     </script>
+
+
 
 </body>
 
