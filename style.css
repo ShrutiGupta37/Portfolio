@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: rgb(0, 0, 36);
+            background-color: #302b60;
             color: white;
             font-family: 'Poppins', sans-serif;
 
@@ -88,7 +88,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 125px 0;
+            padding: 50px 0;
 
 
         }
@@ -130,7 +130,7 @@
         .thirdSection {
             max-width: 100%;
             margin: 5% 5%;
-            height: 100vh;
+            height: fit-content;
             padding: 60px 0;
         }
 
@@ -159,7 +159,9 @@
         }
 
         .text-gray {
-            color: gray;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            font-weight: bold;
         }
 
         .secondSection h1 {
@@ -167,6 +169,9 @@
 
             font-size: 2.3rem;
             height: 80px;
+            color:goldenrod;
+       
+        
         }
 
         .skills-section h1 {
@@ -174,12 +179,14 @@
 
             font-size: 2.3rem;
             height: 125px;
+               color:goldenrod;
         }
 
         .thirdSection h1 {
             margin: 11px 0px;
             font-size: 2.3rem;
             height: 87px;
+               color:goldenrod;
         }
 
         .secondSection .box {
@@ -195,6 +202,7 @@
         }
 
 
+
         .secondSection .vertical {
             position: relative;
             width: 280px;
@@ -203,12 +211,13 @@
             border-radius: 12px;
             padding: 2px 7px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 3px rgb(0, 0, 0);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             margin-top: 50px;
+            background-color: #19134c;
         }
 
         .secondSection .vertical::after {
@@ -274,11 +283,11 @@
         .thirdSection .box {
             width: 172px;
             height: 430px;
-            background-color: rgb(15, 18, 72);
+            background-color: #19134c;
             color: white;
             border-radius: 12px;
             padding: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -377,7 +386,7 @@
         .skills-section {
             max-width: 100%;
             margin: 5% 5%;
-            height: 50vh;
+            height: fit-content;
             padding: 100px 0;
         }
 
@@ -402,12 +411,16 @@
 
             /* change to your accent color */
             transform: scale(1.5);
+            text-shadow: 0 4px 3px rgb(0, 0, 0);
         }
 
         .tech-icon img:hover {
 
             /* change to your accent color */
             transform: scale(1.5);
+            text-shadow: 0 4px 3px rgb(0, 0, 0);
+            
+            
         }
 
         .tech-icon i {
@@ -518,46 +531,25 @@
             }
         }
 
-        @media (max-width:px) {
-            main .hr2 {
-                border: 0;
-                height: 1.2px;
-                margin: 220px 84px;
-            }
-        }
-
-        @media (max-width: 805px) {
-            main .hr2 {
-                border: 0;
-                height: 1.2px;
-                margin: 237px 84px;
-            }
-        }
-
-        @media (max-width: 443px) {
-            main .hr2 {
-                border: 0;
-                height: 1.2px;
-                margin: 890px 84px;
-            }
-        }
 
         @media (max-width: 425px) {
             .firstSection .leftSection {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 width: 50%;
             }
 
             .firstSection .rightSection {
-                width: 60%;
+                width: 100%;
+            }
+
+            .firstSection .rightSection img {
+                width: 90%;
             }
 
             .firstSection .leftSection a {
                 font-size: 1rem;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
+
 
             }
 
@@ -571,26 +563,25 @@
 
 
 
-
-
-
-
-
         .firstSection-buttons {
             margin-top: 55px;
         }
 
         .firstSection-buttons .btn {
-            padding: 4px 7px;
+            padding: 12px 8px;
             display: inline-flex;
-            margin: 6px;
-            background-color: rgb(23 2 50 / 64%);
+            margin: 10px;
+            background-color: #1e1e2f;
             color: #f8efdc;
             border-radius: 10px;
             text-decoration: none;
             transition: background-color 0.6s ease;
 
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+
+
+
+
         }
 
         .firstSection-buttons .btn i {
@@ -611,8 +602,8 @@
         .social-icons {
             display: flex;
             justify-content: start;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 20px;
+            margin-bottom: 45px;
         }
 
         .social-icon {
@@ -652,7 +643,7 @@
             height: 180px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow:  0 4px 3px rgb(0, 0, 0);
         }
 
         .box:hover .project-thumbnail {
@@ -728,11 +719,6 @@
                 margin: 10px 0;
             }
         }
-
-
-
-
-
 
 
 
