@@ -13,15 +13,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/index.css">
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <div class="floating-bg">
+        <div class="squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+
+
     <header id="navbar">
         <nav>
             <div class="left">Shruti's Portfolio</div>
@@ -77,7 +91,8 @@
                 </div>
             </div>
             <div class="rightSection">
-                <img src="images/Bg.gif" alt="">
+                <!-- <img src="images/Bg.gif" alt="Shruti"> -->
+                <img src="images/Shruti.jpeg" alt="Shruti" class="profile-pic">
             </div>
 
         </section>
@@ -143,90 +158,465 @@
         </div>
 
         <section id="projects" class="thirdSection fade-in">
-            <span class="text-gray">Projects I have worked</span>
+            <span class="text-gray">Projects I have made</span>
             <div class="vertical"></div>
             <h1>Projects</h1>
-            <div class="container">
-                <div class="box slide-left">
-                    <div class="box-title"> Face Emotion Detection System</div>
-                    <div class="box-middle">
-                        <img src="images/ERS.png" alt="Face Emotion Detection" class="project-thumbnail" />
-                        <div class="box-desc">
-                            Built a real-time facial emotion recognition system using CNN and OpenCV.<br><br>
-                            <strong>Tech Stack:</strong> Python, OpenCV, TensorFlow, Keras
+
+            <div class="projects-wrapper">
+
+                <button class="project-nav prev" onclick="scrollProjects(-1)">
+                    &#10094;
+                </button>
+
+
+                <!-- KAHGSGKAK -->
+
+                
+                <div class="container" id="projectsContainer">
+                    <div class="projects-track">
+
+                        <!-- ================= PROJECT 1 ================= -->
+                        <div class="box">
+                            <div class="box-title">MediBot - RAG Based Chatbot</div>
+
+                            <div class="box-middle">
+                                <img src="images/MediBot.png" alt="MediBot RAG Chatbot" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed a medical RAG chatbot that retrieves relevant information from medical
+                                    documents and provides context-based responses.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>LangChain</span>
+                                        <span>FAISS</span>
+                                        <span>Groq</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/MediBot" target="_blank" class="view-btn">
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                    <br><br>
-                    <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
-                        class="view-btn">View Project</a>
 
-                </div>
-                <div class="box slide-right">
-                    <div class="box-title">Periodic Table Visualizer</div>
-                    <div class="box-middle">
-                        <img src="images/PT.png" alt="Face Emotion Detection" class="project-thumbnail" />
-                        <div class="box-desc">
-                            Created an interactive periodic table using Python and Pygame with tooltips and images
-                            for
-                            enhanced engagement.<br><br>
-                            <strong>Tech Stack:</strong> Python, Pygame, Pandas
+
+                        <!-- ================= PROJECT 2 ================= -->
+                        <div class="box">
+                            <div class="box-title">Face Emotion Detection System</div>
+
+                            <div class="box-middle">
+                                <img src="images/ERS.png" alt="Face Emotion Detection" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Built a real-time facial emotion recognition system using CNN and OpenCV.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>OpenCV</span>
+                                        <span>TensorFlow</span>
+                                        <span>Keras</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                    <br><br>
-                    <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
-                        class="view-btn">View Project</a>
 
-                </div>
 
-                <div class="box slide-left">
-                    <div class="box-title">Breast Cancer Detection using Machine Learning</div>
-                    <div class="box-middle">
-                        <img src="images/BCD.png" alt="Face Emotion Detection" class="project-thumbnail" />
-                        <div class="box-desc">
-                            Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
-                            accuracy.<br><br>
-                            <strong>Tech Stack:</strong> Python, Scikit-learn, XGBoost, Pandas , Html , Css
+                        <!-- ================= PROJECT 3 ================= -->
+                        <div class="box">
+                            <div class="box-title">
+                                Breast Cancer Detection using Machine Learning
+                            </div>
+
+                            <div class="box-middle">
+                                <img src="images/BCD.png" alt="Breast Cancer Detection" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
+                                    accuracy.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Scikit-learn</span>
+                                        <span>XGBoost</span>
+                                        <span>Pandas</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
+                                target="_blank" class="view-btn">
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                    <br><br>
-                    <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
-                        target="_blank" class="view-btn">View Project</a>
 
-                </div>
 
-                <div class="box slide-right">
-                    <div class="box-title">BCREC Chatbot</div>
-                    <div class="box-middle">
-                        <img src="images/BC.png" alt="Face Emotion Detection" class="project-thumbnail" />
-                        <div class="box-desc">
-                            Built a rule-based chatbot using NLP to answer college-related queries for
-                            BCREC.<br><br>
-                            <strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, Streamlit
+                        <!-- ================= PROJECT 4 ================= -->
+                        <div class="box">
+                            <div class="box-title">BCREC Chatbot</div>
+
+                            <div class="box-middle">
+                                <img src="images/BC.png" alt="BCREC Chatbot" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Built a rule-based chatbot using NLP to answer college-related queries for BCREC.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>NLTK</span>
+                                        <span>Scikit-learn</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                    <br><br>
-                    <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">View
-                        Project</a>
 
-                </div>
 
-                <div class="box slide-left">
-                    <div class="box-title">Automated Invoice Email Reminder</div>
-                    <div class="box-middle">
-                        <img src="images/AEIR.png" alt="Face Emotion Detection" class="project-thumbnail" />
-                        <div class="box-desc">
-                            Scheduled email reminders using GitHub Actions and Gmail SMTP.<br>
-                            Used Google Sheets as a data source and secured credentials via environment
-                            variables.<br><br>
-                            <strong>Tech Stack:</strong> Python, Pandas, GitHub Actions, Gmail SMTP
+                        <!-- ================= PROJECT 5 ================= -->
+                        <div class="box">
+                            <div class="box-title">Credit Card Financial Dashboard</div>
+
+                            <div class="box-middle">
+                                <img src="images/CCFD.png" alt="Credit Card Financial Dashboard"
+                                    class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed an interactive Power BI dashboard to analyze credit card transactions,
+                                    customer behavior, revenue, interest, and spending patterns.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>SQL</span>
+                                        <span>Python</span>
+                                        <span>Power BI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Credit_Card_Financial_Dashboard" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                    <br><br>
-                    <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
-                        class="view-btn">View
-                        Project</a>
 
+
+                        <!-- ================= PROJECT 6 ================= -->
+                        <div class="box">
+                            <div class="box-title">Periodic Table Visualizer</div>
+
+                            <div class="box-middle">
+                                <img src="images/PT.png" alt="Periodic Table Visualizer" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Created an interactive periodic table using Python and Pygame with tooltips and
+                                    images for enhanced engagement.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Pygame</span>
+                                        <span>Pandas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 7 ================= -->
+                        <div class="box">
+                            <div class="box-title">Automated Invoice Email Reminder</div>
+
+                            <div class="box-middle">
+                                <img src="images/AEIR.png" alt="Automated Invoice Email Reminder"
+                                    class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Scheduled email reminders using GitHub Actions and Gmail SMTP.
+                                    <br>
+                                    Used Google Sheets as a data source and secured credentials via environment
+                                    variables.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Pandas</span>
+                                        <span>GitHub Actions</span>
+                                        <span>Gmail SMTP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================================================= -->
+                        <!-- DUPLICATE PROJECTS FOR INFINITE SCROLL -->
+                        <!-- Same order as above -->
+                        <!-- ================================================= -->
+
+
+                        <!-- ================= PROJECT 1 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">MediBot - RAG Based Chatbot</div>
+
+                            <div class="box-middle">
+                                <img src="images/MediBot.png" alt="MediBot RAG Chatbot" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed a medical RAG chatbot that retrieves relevant information from medical
+                                    documents and provides context-based responses.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>LangChain</span>
+                                        <span>FAISS</span>
+                                        <span>Groq</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/MediBot" target="_blank" class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 2 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">Face Emotion Detection System</div>
+
+                            <div class="box-middle">
+                                <img src="images/ERS.png" alt="Face Emotion Detection" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Built a real-time facial emotion recognition system using CNN and OpenCV.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>OpenCV</span>
+                                        <span>TensorFlow</span>
+                                        <span>Keras</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Face-Emotion-Detection-System" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 3 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">
+                                Breast Cancer Detection using Machine Learning
+                            </div>
+
+                            <div class="box-middle">
+                                <img src="images/BCD.png" alt="Breast Cancer Detection" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed a machine learning model using XGBoost to detect breast cancer with 98.2%
+                                    accuracy.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Scikit-learn</span>
+                                        <span>XGBoost</span>
+                                        <span>Pandas</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Breast-Cancer-Detection-using-Machine-Learning"
+                                target="_blank" class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 4 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">BCREC Chatbot</div>
+
+                            <div class="box-middle">
+                                <img src="images/BC.png" alt="BCREC Chatbot" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Built a rule-based chatbot using NLP to answer college-related queries for BCREC.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>NLTK</span>
+                                        <span>Scikit-learn</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/BCREC-ChatBot" target="_blank" class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 5 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">Credit Card Financial Dashboard</div>
+
+                            <div class="box-middle">
+                                <img src="images/CCFD.png" alt="Credit Card Financial Dashboard"
+                                    class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Developed an interactive Power BI dashboard to analyze credit card transactions,
+                                    customer behavior, revenue, interest, and spending patterns.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>SQL</span>
+                                        <span>Python</span>
+                                        <span>Power BI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Credit_Card_Financial_Dashboard" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 6 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">Periodic Table Visualizer</div>
+
+                            <div class="box-middle">
+                                <img src="images/PT.png" alt="Periodic Table Visualizer" class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Created an interactive periodic table using Python and Pygame with tooltips and
+                                    images for enhanced engagement.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Pygame</span>
+                                        <span>Pandas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Periodic-Table-Using-Python" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+
+                        <!-- ================= PROJECT 7 DUPLICATE ================= -->
+                        <div class="box">
+                            <div class="box-title">Automated Invoice Email Reminder</div>
+
+                            <div class="box-middle">
+                                <img src="images/AEIR.png" alt="Automated Invoice Email Reminder"
+                                    class="project-thumbnail">
+
+                                <div class="box-desc">
+                                    Scheduled email reminders using GitHub Actions and Gmail SMTP.
+                                    <br>
+                                    Used Google Sheets as a data source and secured credentials via environment
+                                    variables.
+
+                                    <br><br>
+
+                                    <div class="tech-stack">
+                                        <strong>Tech Stack:</strong>
+                                        <span>Python</span>
+                                        <span>Pandas</span>
+                                        <span>GitHub Actions</span>
+                                        <span>Gmail SMTP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/ShrutiGupta37/Automated-Invoice-Email-Reminder" target="_blank"
+                                class="view-btn">
+                                View Project
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
+                
+
+
+                <!-- JGVJVAS -->
+
+            </div>
+            <button class="project-nav next" onclick="scrollProjects(1)">
+                &#10095;
+            </button>
 
             </div>
         </section>
@@ -235,7 +625,7 @@
             <hr>
         </div>
 
-        <section id="skills" class="skills-section fade-in">
+        <section id="skills" class="skills-section fade-in" data-aos="fade-up">
             <span class="text-gray">What skills I know </span>
             <h1>Skills</h1>
             <div class="tech-grid">
@@ -249,9 +639,20 @@
                 </div>
 
                 <div class="tech-icon">
+                    <i class="devicon-java-plain colored"></i>
+                    <span>Java</span>
+                </div>
+
+                <div class="tech-icon">
+                    <i class="devicon-c-plain colored"></i>
+                    <span>C</span>
+                </div>
+
+                <div class="tech-icon">
                     <i class="devicon-python-plain colored"></i>
                     <span>Python</span>
                 </div>
+
                 <div class="tech-icon">
                     <i class="devicon-numpy-original colored"></i>
                     <span>NumPy</span>
@@ -277,13 +678,37 @@
                     <span>Scikit-learn</span>
                 </div>
 
-
-
                 <div class="tech-icon">
-                    <i class="devicon-c-plain colored"></i>
-                    <span>C</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/250px-Created_with_Matplotlib-logo.svg.png"
+                        alt="Matplotlib">
+                    <span>Matplotlib</span>
                 </div>
 
+                <div class="tech-icon">
+                    <img src="https://cdn.simpleicons.org/langchain" alt="LangChain">
+                    <span>LangChain</span>
+                </div>
+
+                <div class="tech-icon">
+                    <img src="https://cdn.simpleicons.org/huggingface" alt="Hugging Face">
+                    <span>Hugging Face</span>
+                </div>
+
+                <div class="tech-icon">
+                    <i class="fas fa-database"></i>
+                    <span>FAISS</span>
+                </div>
+
+                <div class="tech-icon">
+                    <img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit">
+                    <span>Streamlit</span>
+                </div>
+
+                <div class="tech-icon">
+                    <img src="https://1000logos.net/wp-content/uploads/2022/08/Microsoft-Power-BI-Logo.png"
+                        alt="Power BI">
+                    <span>Power BI</span>
+                </div>
 
                 <div class="tech-icon">
                     <i class="devicon-git-plain colored"></i>
@@ -342,6 +767,7 @@
                 <h4>Connect</h4>
                 <ul>
                     <li><a href="https://github.com/ShrutiGupta37" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.hackerrank.com/profile/shr_197575">HackerRank</a></li>
                     <li><a href="https://www.linkedin.com/in/shruti-gupta-32134b268/" target="_blank">LinkedIn</a></li>
                     <li><a href="mailto:shrutigupta.cse37@gmail.com">Email</a></li>
                 </ul>
@@ -407,13 +833,97 @@
         }
 
 
+        // STAR ********************************
 
 
+    </script>
+    <script>
+        const container = document.getElementById("projectsContainer");
 
+        let autoScroll = true;
+        let scrollSpeed = 2;
+        let resumeTimer;
+
+
+        /* ============================= */
+        /* Automatic Scrolling */
+        /* ============================= */
+
+        function automaticScroll() {
+
+            if (autoScroll) {
+
+                container.scrollLeft += scrollSpeed;
+
+                // When reaching the end, go back to beginning
+                if (
+                    container.scrollLeft + container.clientWidth
+                    >= container.scrollWidth - 1
+                ) {
+                    container.scrollLeft = 0;
+                }
+            }
+
+            requestAnimationFrame(automaticScroll);
+        }
+
+        automaticScroll();
+
+
+        /* ============================= */
+        /* Manual Left / Right Buttons */
+        /* ============================= */
+
+        function scrollProjects(direction) {
+
+            autoScroll = false;
+
+            container.scrollBy({
+                left: direction * 530,
+                behavior: "smooth"
+            });
+
+            clearTimeout(resumeTimer);
+
+            resumeTimer = setTimeout(() => {
+                autoScroll = true;
+            }, 3000);
+        }
+
+
+        /* ============================= */
+        /* Pause While Mouse Is Over */
+        /* ============================= */
+
+        container.addEventListener("mouseenter", () => {
+            autoScroll = false;
+        });
+
+        container.addEventListener("mouseleave", () => {
+            autoScroll = true;
+        });
+
+
+        /* ============================= */
+        /* Pause When User Scrolls */
+        /* ============================= */
+
+        container.addEventListener("wheel", () => {
+
+            autoScroll = false;
+
+            clearTimeout(resumeTimer);
+
+            resumeTimer = setTimeout(() => {
+                autoScroll = true;
+            }, 3000);
+
+        });
     </script>
 
 
 
 </body>
+
 
 </html>
