@@ -270,6 +270,11 @@
             color: yellow;
         }
 
+
+
+
+
+
         .secondSection {
             max-width: 100%;
             margin: 5% 5%;
@@ -1035,49 +1040,60 @@
         }
 
         /* =========================
-   NAVIGATION BUTTONS
+   PROJECT NAVIGATION BUTTONS
 ========================= */
 
-        .project-nav {
-            position: absolute;
+        .projects-wrapper {
+            position: relative;
+            width: 100%;
+        }
 
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            z-index: 10;
+        .projects-wrapper>.project-nav {
+            position: absolute !important;
+            top: 50% !important;
+            bottom: auto !important;
+            transform: translateY(-50%) !important;
 
             width: 45px;
             height: 45px;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            appearance: none;
+            -webkit-appearance: none;
 
             border: 1px solid goldenrod;
             border-radius: 50%;
-
-            background: rgba(48, 43, 96, 0.9);
-
+            background: rgba(48, 43, 96, 0.95);
             color: goldenrod;
 
+            font-family: inherit;
             font-size: 24px;
-
+            line-height: 1;
             cursor: pointer;
+            z-index: 100;
 
             transition: all 0.3s ease;
         }
 
-        .project-nav:hover {
+        .projects-wrapper>.project-nav.prev {
+            left: 10px !important;
+            right: auto !important;
+        }
+
+        .projects-wrapper>.project-nav.next {
+            right: 10px !important;
+            left: auto !important;
+        }
+
+        .projects-wrapper>.project-nav:hover {
             background: goldenrod;
-
             color: #302b60;
-
             box-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
-        }
-
-        .project-nav.prev {
-            left: 10px;
-        }
-
-        .project-nav.next {
-            right: 10px;
         }
 
         /* =========================
@@ -1094,13 +1110,11 @@
                 flex: 0 0 330px;
                 width: 330px;
                 height: 620px;
-
                 padding: 25px;
             }
 
             .thirdSection .box-title {
                 height: 70px;
-
                 font-size: 19px;
             }
 
@@ -1108,19 +1122,18 @@
                 height: 170px;
             }
 
-            .project-nav {
+            .projects-wrapper>.project-nav {
                 width: 38px;
                 height: 38px;
-
                 font-size: 20px;
             }
 
-            .project-nav.prev {
-                left: 5px;
+            .projects-wrapper>.project-nav.prev {
+                left: 5px !important;
             }
 
-            .project-nav.next {
-                right: 5px;
+            .projects-wrapper>.project-nav.next {
+                right: 5px !important;
             }
         }
 
@@ -1176,4 +1189,34 @@
             height: 50px;
             object-fit: contain;
             margin-bottom: 8px;
+        }
+
+
+        /* Transparent Research Paper Button */
+        .firstSection-buttons .research-btn {
+            display: flex;
+            width: fit-content;
+            margin: 15px auto 100;
+            justify-content: center;
+            align-items: center;
+
+            background: transparent;
+            border: 1px solid rgba(231, 219, 187, 0.596);
+            color: rgb(248, 201, 126);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.1rem;
+
+            box-shadow: none;
+        }
+
+        .firstSection-buttons .research-btn:hover {
+            background: rgba(155, 79, 3, 0.15);
+            color: #ffd966;
+            border-color: #a7f0f6;
+            box-shadow: 0 0 12px rgba(218, 165, 32, 0.3);
+        }
+
+        .firstSection-buttons .research-btn i {
+            font-size: 1rem;
+            margin-right: 8px;
         }
